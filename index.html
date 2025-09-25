@@ -121,11 +121,57 @@
             text-align: center;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #eee;
-        }
+        .footer {
+    background: #f9f9f9;
+    padding: 30px 20px;
+    border-top: 3px solid #b30000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info, 
+.footer-map, 
+.footer-stats {
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.footer-info a {
+    color: #b30000;
+    text-decoration: none;
+}
+
+.footer-info h3,
+.footer-map h3,
+.footer-stats h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #b30000;
+    font-size: 16px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-stats p {
+    margin: 5px 0;
+}
     </style>
 </head>
 <body>
@@ -191,9 +237,43 @@
         NỘI DUNG ĐẶT Ở ĐÂY
     </div>
 
-    <footer>
-        &copy;
-    </footer>
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Thông tin liên hệ -->
+        <div class="footer-info">
+            <p><strong>Website thuộc bản quyền Trường Cao đẳng Kinh tế Thành phố Hồ Chí Minh.</strong></p>
+            <p>Địa chỉ: số 33 đường Vĩnh Viễn, phường Vườn Lài, Thành phố Hồ Chí Minh.</p>
+            <p>Điện thoại: (028) 38 330 731 (số nhánh 25).</p>
+            <p>Tư vấn tuyển sinh: 08 88 33 01 08 – 08 88 33 06 08.</p>
+            <p>Email: <a href="mailto:hce@kthcm.edu.vn">hce@kthcm.edu.vn</a></p>
+
+            <h3>Kết nối với HCE</h3>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/zalo.png" alt="Zalo"></a>
+                <a href="#"><img src="images/messenger.png" alt="Messenger"></a>
+            </div>
+        </div>
+
+        <!-- Bản đồ -->
+        <div class="footer-map">
+            <h3>Bản đồ</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4659122076424!2d106.67315087565992!3d10.774958589372402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f32b91a6a2d%3A0x58d5c9f4deee93d3!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEtpbmggVMawIFRo4bqhbmggUGjhu5EgSOG7jWMgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1692345678901!5m2!1svi!2s" 
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Thống kê -->
+        <div class="footer-stats">
+            <h3>Thống kê truy cập</h3>
+            <p>Đang online: <strong>1</strong></p>
+            <p>Hôm nay: <strong>182</strong></p>
+            <p>Hôm qua: <strong>203</strong></p>
+            <p>Tổng cộng: <strong>209617</strong></p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
