@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ KTHCM</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #menutrai {
+            font-size: 13px;
+        }
+
+        #menutrai ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0 10px;
+        }
+
+        #menutrai ul li {
+            list-style-type: none;
+            margin: 0 10px;
+        }
+
+        a.menutrai:link,
+        a.menutrai:visited {
+            color: #b22d30;
+            text-decoration: none;
+        }
+
+        a.menutrai:hover {
+            color: #5426d1;
+        }
+
+        .menu-bar {
+            display: flex;
+            background-color: #b22d30;
+            height: 52px;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .menu-bar ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu-bar ul li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .menu-bar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 15px 10px;
+        }
+
+        .menu-bar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ẩn menu con */
+        .menu-bar ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%; /* xuất hiện ngay dưới menu cha */
+            left: 0;
+            background-color:#b22d30;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 180px;
+            z-index: 1000;
+        }
+
+        /* Style cho item trong menu con */
+        .menu-bar ul li ul li {
+            width: 100%;
+        }
+
+        .menu-bar ul li ul li a {
+            padding: 10px;
+            font-weight: normal;
+        }
+
+        .menu-bar ul li ul li a:hover {
+            color:#fff;
+        }
+
+        .menu-bar ul li:hover ul {
+            display: block;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            height: 180px;
+            background-color: aqua;
+        }
+
+        #banner {
+            height: 126px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            min-height: 500px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <div id="banner">
+            <div id="divmenutrai">
+                <nav id="menutrai">
+                    <ul>
+                        <li><a href="https://www.kthcm.edu.vn/" class="menutrai">TRANG CHỦ</a></li>
+                        <li><a href="#" class="menutrai">EGOV</a></li>
+                        <li><a href="#" class="menutrai">SINH VIÊN</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div style="width: 1000px;">
+                <img src="images/Ten-truong-do-1000x159.png" width="500" height="80" alt="Tên Trường" />
+            </div>
+            <div>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <a href="#">Giới Thiệu</a>
+                    <ul>
+                        <li><a href="#">Lịch sử hình thành và phát triển</a></li>
+                        <li><a href="#">Bộ máy tổ chức</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tin Tức - Sự Kiện</a>
+                </li>
+                <li>
+                    <a href="#">Tuyển Sinh</a>
+                    <ul>
+                        <li><a href="#">Tuyển sinh 2025</a></li>
+                        <li><a href="#">Tuyển sinh chính quy</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Công Khai Giáo Dục</a>
+                </li>
+                <li>
+                    <a href="#">Cơ Cấu Tổ Chức</a>
+                    <ul>
+                        <li><a href="#">Đảng - Đoàn Thể</a></li>
+                        <li><a href="#">Ban Giám Hiệu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Liên Kết</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="container">
+        <img src="https://www.kthcm.edu.vn/wp-content/uploads/2023/09/HUY7582_2M-2048x1097.jpg" width="1000" alt="Ảnh sự kiện" />
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        NỘI DUNG ĐẶT Ở ĐÂY
+    </div>
+
+    <footer>
+        &copy;
+    </footer>
+
+</body>
+</html>
